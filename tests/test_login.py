@@ -10,9 +10,9 @@ from pages.login_page import LoginPage
         ('performance_glitch_user', 'secret_sauce'),
     ]
 )
-def test_valid_login(driver, name, password):
+def test_validation_of_login(driver, name, password):
     login_page = LoginPage(driver)
-    login_page.open_url("https://www.saucedemo.com/")
+    login_page.get_login_page()
     login_page.enter_username(name)
     login_page.enter_password(password)
     login_page.click_login()
